@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TestDemo on 柏翔的個人網站</title>
+    <link>https://w32191.github.io/categories/testdemo/</link>
+    <description>Recent content in TestDemo on 柏翔的個人網站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 31 Oct 2021 19:15:47 +0800</lastBuildDate><atom:link href="https://w32191.github.io/categories/testdemo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>https://w32191.github.io/blog/test/</link>
+      <pubDate>Sun, 31 Oct 2021 19:15:47 +0800</pubDate>
+      
+      <guid>https://w32191.github.io/blog/test/</guid>
+      <description>Hello World
+我是阿翔
+一級標題 二級標題 六級標題 我是阿翔，學習中
+ Hello  World     Hello</description>
+    </item>
+    
+  </channel>
+</rss>
