@@ -6,7 +6,26 @@
     <description>Recent content on 柏翔的個人網站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 02 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://w32191.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://w32191.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Server in docker 中文編碼</title>
+      <link>https://w32191.github.io/blog/sql_chinese_collate/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://w32191.github.io/blog/sql_chinese_collate/</guid>
+      <description>SQL Server 台灣中文編碼 docker 裡面的 SQL Server 在 Insert 資料時中文會呈現亂碼。</description>
+    </item>
+    
+    <item>
+      <title>用 docker 架 MSSQL 環境</title>
+      <link>https://w32191.github.io/blog/docker_mssql/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://w32191.github.io/blog/docker_mssql/</guid>
+      <description>官網資料：Microsoft DOC
+docker run -d --name sql_server -e &amp;#39;ACCEPT_EULA=Y&amp;#39; -e &amp;#39;SA_PASSWORD=您要的管理密碼&amp;#39; -p 1433:1433 microsoft/mssql-server-linux 確認是否有啟動：</description>
+    </item>
+    
     <item>
       <title>Day One Of My Website</title>
       <link>https://w32191.github.io/blog/thefirstpage/</link>
