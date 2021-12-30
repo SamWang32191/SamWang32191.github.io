@@ -23,7 +23,9 @@
       
       <guid>https://w32191.github.io/blog/docker_mssql/</guid>
       <description>官網資料：Microsoft DOC
-docker run -d --name sql_server -e &amp;#39;ACCEPT_EULA=Y&amp;#39; -e &amp;#39;SA_PASSWORD=您要的管理密碼&amp;#39; -p 1433:1433 microsoft/mssql-server-linux 確認是否有啟動：</description>
+將container image pull下來
+docker pull mcr.microsoft.com/mssql/server:2019-latest 再run
+docker run -e &amp;#34;ACCEPT_EULA=Y&amp;#34; -e &amp;#34;SA_PASSWORD=密碼&amp;#34; \  -p 1433:1433 --name sql1 -h sql1 \  -d mcr.</description>
     </item>
     
     <item>

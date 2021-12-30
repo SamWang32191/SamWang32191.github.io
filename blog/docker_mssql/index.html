@@ -125,7 +125,17 @@
         
         <div class="content mb-5">
           <p>官網資料：<a href="https://docs.microsoft.com/zh-tw/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&amp;pivots=cs1-bash">Microsoft DOC</a></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d --name sql_server -e <span style="color:#4070a0">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#4070a0">&#39;SA_PASSWORD=您要的管理密碼&#39;</span> -p 1433:1433 microsoft/mssql-server-linux
+<p>將container image pull下來</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull mcr.microsoft.com/mssql/server:2019-latest
+</code></pre></div><p>再run</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -e <span style="color:#4070a0">&#34;ACCEPT_EULA=Y&#34;</span> -e <span style="color:#4070a0">&#34;SA_PASSWORD=密碼&#34;</span> <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>   -p 1433:1433 --name sql1 -h sql1 <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>   -d mcr.microsoft.com/mssql/server:2019-latest
+</code></pre></div><p><strong>SQL Server 2019 不支援 ARM架構的MAC</strong>
+<strong>改安裝 Azure SQL Edge</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull mcr.microsoft.com/azure-sql-edge
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -e <span style="color:#4070a0">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#4070a0">&#39;SA_PASSWORD=密碼&#39;</span> 
+  -p 1433:1433 --name mssql -d mcr.microsoft.com/azure-sql-edge
 </code></pre></div><p>確認是否有啟動：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps -a
 </code></pre></div><p>記下 Container ID。</p>
@@ -133,7 +143,9 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker stop <span style="color:#4070a0">&#39;Container ID&#39;</span>
 </code></pre></div><p>重新啟動ＭＳＳＱＬ</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker start <span style="color:#4070a0">&#39;Container ID&#39;</span>
-</code></pre></div><p>資料來源：<a href="https://code101.app/docs/SQL/sqlserver/env/sql-sqlserver-dbTaiwan">Jerry Tai</a></p>
+</code></pre></div><p>資料來源：
+<a href="https://code101.app/docs/SQL/sqlserver/env/sql-sqlserver-dbTaiwan">Jerry Tai</a>、
+<a href="https://database.guide/how-to-install-sql-server-on-an-m1-mac-arm64/">How to Install SQL Server on an M1 Mac (ARM64)</a></p>
 
         </div>
 
