@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="阿翔的個人網站">
+  <meta name="description" content="Docker 複製本機檔案至Container的指令">
   <meta name="author" content="阿翔">
   <meta name="generator" content="Hugo 0.88.1" />
 
@@ -106,117 +106,57 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-       
-       <div class="col-lg-4">
-  <div class="widgets">
-    
-    <div class="widget">
-      
-      <h4 class="widget-title">About Me</h4>
-      
-      <img src="https://w32191.github.io/images/myself01.jpg" alt=""
-        class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-      
-      
-      <p>我是柏翔</p>
-      <p>正在重新學習Java</p>
-      <a href="https://w32191.github.io/about/" class="btn btn-outline-primary">Know More</a>
-      
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Category</h4>
-      <ul class="list-unstyled">
-        <li><a
-            href="/categories/docker">Docker</a>
-        </li>
-        <li><a
-            href="/categories/sql">SQL</a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Tag</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/docker">Docker</a></li>
-        <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-            href="/tags/sql">SQL</a></li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">Social</h4>
-      <ul class="list-inline social-links">
+      <div class="col-lg-10 mx-auto">
         
-        <li class="list-inline-item"><a href="https://github.com/w32191"><i class="ti-github"></i></a></li>
+        <a href="/categories/docker"
+          class="text-primary">Docker</a>
         
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-       
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <div class="card-body px-0">
-        
-        <a href="https://w32191.github.io/categories/docker/" class="h5 d-block my-3">Docker</a>
+        <h2>Docker 複製本機檔案至Container</h2>
         <div class="mb-3 post-meta">
-            <span>By 阿翔</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>0001-01-01</span>
-            
-        </div>
-        <p class="card-text"></p>
-        <a href="https://w32191.github.io/categories/docker/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+          <span>By 阿翔</span>
           
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <div class="card-body px-0">
-        
-        <a href="https://w32191.github.io/categories/sql/" class="h5 d-block my-3">SQL</a>
-        <div class="mb-3 post-meta">
-            <span>By 阿翔</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>0001-01-01</span>
-            
-        </div>
-        <p class="card-text"></p>
-        <a href="https://w32191.github.io/categories/sql/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2022-01-03</span>
           
         </div>
-      </div>
-     
+        
+        <div class="content mb-5">
+          <p>指令：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker cp &lt;src_file_path&gt; &lt;container name&gt;:&lt;target_path&gt;
+</code></pre></div><ul>
+<li><code>&lt;src_file_path&gt;</code> ：要複製的檔案來源位置＆檔名</li>
+<li><code>&lt;container name&gt;</code> ：容器名，可用<code>docker ps -a</code> 查看，或用container的ID亦可</li>
+<li><code>&lt;target_path&gt;</code> ：容器內要複製的目標位置</li>
+</ul>
+<p>Ex:</p>
+<p>現有一檔案名<em>test.txt</em>、另有一container名 <em>testContainer</em>，</p>
+<p>要複製到testContainer中路徑 /tmp/中，並更名為target.txt</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker cp test.txt testContainer:/tmp/target.txt
+</code></pre></div><p>複製後使用<code>docker exec -it container_ID bash</code> 進入container_ID的bash</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker <span style="color:#007020">exec</span> -it testContainer bash
+testContainer@e27a6feb195c:/$
+</code></pre></div><p>在container bash根目錄中 <code>cd tmp &amp;&amp; ls</code> 查看是否有複製成功</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">testContainer@e27a6feb195c:/$ <span style="color:#007020">cd</span> tmp <span style="color:#666">&amp;&amp;</span> ls
+target.txt
+</code></pre></div>
+        </div>
 
-      
-      <div class="col-12 mt-5">
         
+        
+        <script src="https://utteranc.es/client.js"
+        repo="w32191/w32191.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+        </script>
       </div>
     </div>
   </div>
 </section>
-
 
 
 
