@@ -125,7 +125,7 @@
         
         <div class="content mb-5">
           <p>指令：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker cp &lt;src_file_path&gt; &lt;container name&gt;:&lt;target_path&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker cp &lt;src_file_path&gt; &lt;container name&gt;:&lt;target_path&gt;
 </code></pre></div><ul>
 <li><code>&lt;src_file_path&gt;</code> ：要複製的檔案來源位置＆檔名</li>
 <li><code>&lt;container name&gt;</code> ：容器名，可用<code>docker ps -a</code> 查看，或用container的ID亦可</li>
@@ -134,12 +134,12 @@
 <p>Ex:</p>
 <p>現有一檔案名<em>test.txt</em>、另有一container名 <em>testContainer</em>，</p>
 <p>要複製到testContainer中路徑 /tmp/中，並更名為target.txt</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker cp test.txt testContainer:/tmp/target.txt
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker cp test.txt testContainer:/tmp/target.txt
 </code></pre></div><p>複製後使用<code>docker exec -it container_ID bash</code> 進入container_ID的bash</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker <span style="color:#007020">exec</span> -it testContainer bash
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker <span style="color:#007020">exec</span> -it testContainer bash
 testContainer@e27a6feb195c:/$
 </code></pre></div><p>在container bash根目錄中 <code>cd tmp &amp;&amp; ls</code> 查看是否有複製成功</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">testContainer@e27a6feb195c:/$ <span style="color:#007020">cd</span> tmp <span style="color:#666">&amp;&amp;</span> ls
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">testContainer@e27a6feb195c:/$ <span style="color:#007020">cd</span> tmp <span style="color:#666">&amp;&amp;</span> ls
 target.txt
 </code></pre></div>
         </div>
