@@ -131,13 +131,15 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo docker run -e <span style="color:#4070a0">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#4070a0">&#39;SA_PASSWORD=Passw0rd!&#39;</span> <span style="color:#4070a0;font-weight:bold">\
 </span><span style="color:#4070a0;font-weight:bold"></span>   -p 1433:1433 --name sql1 <span style="color:#4070a0;font-weight:bold">\
 </span><span style="color:#4070a0;font-weight:bold"></span>   -e <span style="color:#4070a0">&#39;TZ=Asia/Taipei&#39;</span><span style="color:#4070a0;font-weight:bold">\
-</span><span style="color:#4070a0;font-weight:bold"></span>   -d mcr.microsoft.com/azure-sql-edge
+</span><span style="color:#4070a0;font-weight:bold"></span>   -d mcr.microsoft.com/mssql/server:2019-latest
 
 </code></pre></div><p><strong>SQL Server 2019 不支援 ARM架構的MAC</strong>
 <strong>改安裝 Azure SQL Edge</strong></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull mcr.microsoft.com/azure-sql-edge
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -e <span style="color:#4070a0">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#4070a0">&#39;SA_PASSWORD=密碼&#39;</span> 
-  -p 1433:1433 --name mssql -d mcr.microsoft.com/azure-sql-edge
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo docker run -e <span style="color:#4070a0">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#4070a0">&#39;SA_PASSWORD=Passw0rd!&#39;</span> <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>   -p 1433:1433 --name sql1 <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>   -e <span style="color:#4070a0">&#39;TZ=Asia/Taipei&#39;</span><span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>   -d mcr.microsoft.com/azure-sql-edge
 </code></pre></div><p>確認是否有啟動：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps -a
 </code></pre></div><p>記下 Container ID。</p>
