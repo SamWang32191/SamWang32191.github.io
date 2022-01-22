@@ -18,6 +18,16 @@ docker cp &amp;lt;src_file_path&amp;gt; &amp;lt;container name&amp;gt;:&amp;lt;t
     </item>
     
     <item>
+      <title>SQL Server IDENTITY RESEED</title>
+      <link>https://w32191.github.io/blog/mssql_identity_reseed/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://w32191.github.io/blog/mssql_identity_reseed/</guid>
+      <description>Primary key 設定IDENTITY後，想重新計數，語法：
+-- Syntax for SQL Server and Azure SQL Database DBCCCHECKIDENT(table_name[,{NORESEED|{RESEED[,new_reseed_value]}}])[WITHNO_INFOMSGS]範例： 現在想將MyTable，這張table從0再開始自增：</description>
+    </item>
+    
+    <item>
       <title>SQL Server in docker 中文編碼</title>
       <link>https://w32191.github.io/blog/sql_chinese_collate/</link>
       <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
