@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用IntelliJ idea 導入 eclipse dynamic web project">
+  <meta name="description" content="用IntelliJ IDEA (2021.3.2) 導入 eclipse dynamic web project">
   <meta name="author" content="阿翔">
   <meta name="generator" content="Hugo 0.88.1" />
 
@@ -114,7 +114,7 @@
         <a href="/categories/java"
           class="text-primary">Java</a>
         
-        <h2>用IntelliJ idea 導入 eclipse dynamic web project</h2>
+        <h2>用IntelliJ IDEA (2021.3.2) 導入 eclipse dynamic web project</h2>
         <div class="mb-3 post-meta">
           <span>By 阿翔</span>
           
@@ -124,30 +124,63 @@
         </div>
         
         <div class="content mb-5">
-          <h3 id="1file--new--project-from-existing-sources">1.File &raquo; New &raquo; Project from Existing Sources</h3>
-<p><img src="../../images/imgs/p01.png" alt="image">
-<img src="../../images/imgs/p02.png" alt="image">
-<img src="../../images/imgs/p03.png" alt="image">
-<img src="../../images/imgs/p04.png" alt="image">
-<img src="../../images/imgs/p05.png" alt="image">
-<img src="../../images/imgs/p06.png" alt="image">
-<img src="../../images/imgs/p07.png" alt="image">
-<img src="../../images/imgs/p08.png" alt="image">
+          <h4 id="1-file--new--project-from-existing-sources">1. File &raquo; New &raquo; Project from Existing Sources</h4>
+<p><img src="../../images/imgs/p01.png" alt="image"></p>
+<h4 id="2-import-project-from-external-model--eclipse">2. Import project from external model &raquo; eclipse</h4>
+<p><img src="../../images/imgs/p02.png" alt="image"></p>
+<h4 id="3-選create-module-files-near-classpath-files">3. 選Create module files near .classpath files</h4>
+<p><img src="../../images/imgs/p03.png" alt="image"></p>
+<h4 id="4-next">4. Next</h4>
+<p><img src="../../images/imgs/p04.png" alt="image"></p>
+<h4 id="5-use-default-project-code-style">5. Use default project code style</h4>
+<p><img src="../../images/imgs/p05.png" alt="image"></p>
+<h4 id="6-設定ｊｄｋ版本後就finish">6. 設定ＪＤＫ版本後就Finish</h4>
+<p><img src="../../images/imgs/p06.png" alt="image"></p>
+<h4 id="7-file--project-structure">7. File &raquo; Project Structure</h4>
+<p><img src="../../images/imgs/p07.png" alt="image"></p>
+<h4 id="8-設定ｊｄｋ並將下方紅色的-移除">8. 設定ＪＤＫ，並將下方紅色的 移除</h4>
+<p><img src="../../images/imgs/p08.png" alt="image"></p>
+<h4 id="9-將web-inf裡面的lib資料夾設為-jar-directory">9. 將WEB-INF裡面的lib資料夾設為 Jar Directory</h4>
+<p>點加號，選第一個Jar or Directories
 <img src="../../images/imgs/p09.png" alt="image">
 <img src="../../images/imgs/p10.png" alt="image">
-<img src="../../images/imgs/p11.png" alt="image">
-<img src="../../images/imgs/p12.png" alt="image">
-<img src="../../images/imgs/p13.png" alt="image">
-<img src="../../images/imgs/p14.png" alt="image">
-<img src="../../images/imgs/p15.png" alt="image">
-<img src="../../images/imgs/p16.png" alt="image">
-<img src="../../images/imgs/p17.png" alt="image">
-<img src="../../images/imgs/p18.png" alt="image">
-<img src="../../images/imgs/p19.png" alt="image">
-<img src="../../images/imgs/p20.png" alt="image">
-<img src="../../images/imgs/p21.png" alt="image">
-<img src="../../images/imgs/p22.png" alt="image">
-<img src="../../images/imgs/p23.png" alt="image">
+<img src="../../images/imgs/p11.png" alt="image"></p>
+<h4 id="10-點加號選library將tomcat加入">10. 點加號，選Library,將Tomcat加入</h4>
+<p>(如沒有設定過Tomcat，後面流程設定後，再回來選)
+<img src="../../images/imgs/p27.png" alt="image">
+點ＯＫ
+<img src="../../images/imgs/p12.png" alt="image"></p>
+<h4 id="11-左邊選單facets-web">11. 左邊選單Facets ＋Web</h4>
+<p><img src="../../images/imgs/p13.png" alt="image">
+會跳出Module，點OK
+<img src="../../images/imgs/p14.png" alt="image"></p>
+<h4 id="12-預設帶進來的deployment-descriptors與下方directory會是錯的">12. 預設帶進來的Deployment Descriptors與下方Directory會是錯的</h4>
+<h4 id="deployment-descriptors路徑要改到-webxml-如果沒有就先刪掉">Deployment Descriptors路徑要改到 web.xml (如果沒有就先刪掉)</h4>
+<h4 id="下方directory路徑要設定到webapp資料夾">下方Directory路徑要設定到webapp資料夾</h4>
+<p><img src="../../images/imgs/p15.png" alt="image"></p>
+<h4 id="13-設定artifacts--web-application-exploded--from-modules">13. 設定Artifacts &raquo; Web Application: Exploded &raquo; from Modules</h4>
+<p><img src="../../images/imgs/p16.png" alt="image">
+會跳出Module，點OK
+<img src="../../images/imgs/p17.png" alt="image"></p>
+<h4 id="右下角ｏｋ">右下角ＯＫ</h4>
+<p><img src="../../images/imgs/p18.png" alt="image"></p>
+<!-- raw HTML omitted -->
+<h4 id="設定tomcat">設定Tomcat</h4>
+<h4 id="add-configuration--edit-configuration-templates">Add Configuration &raquo; Edit Configuration templates</h4>
+<p><img src="../../images/imgs/p19.png" alt="image"></p>
+<h4 id="configure-選到tomcat-資料夾">Configure&hellip; 選到Tomcat 資料夾</h4>
+<p><img src="../../images/imgs/P25.png" alt="image">
+<img src="../../images/imgs/p26.png" alt="image">
+ＯＫ
+<img src="../../images/imgs/p20.png" alt="image"></p>
+<h4 id="add-new--tomcat-server--local">Add new&hellip; &raquo; Tomcat Server &raquo; Local</h4>
+<p><img src="../../images/imgs/p21.png" alt="image"></p>
+<h4 id="deployment--artifact">Deployment &raquo; ➕Artifact</h4>
+<p><img src="../../images/imgs/p22.png" alt="image"></p>
+<h4 id="heading"></h4>
+<p><img src="../../images/imgs/p23.png" alt="image"></p>
+<h4 id="application-context-">Application context &raquo;</h4>
+<p>設定後專案網址：http://localhost:8080/Servlet01/
 <img src="../../images/imgs/p24.png" alt="image"></p>
 
         </div>
