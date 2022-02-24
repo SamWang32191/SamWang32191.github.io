@@ -18,6 +18,16 @@ docker cp &amp;lt;src_file_path&amp;gt; &amp;lt;container name&amp;gt;:&amp;lt;t
     </item>
     
     <item>
+      <title>Connection Pool setup</title>
+      <link>https://w32191.github.io/blog/connection_pool_setup/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://w32191.github.io/blog/connection_pool_setup/</guid>
+      <description>1. 在webapp中 META-INF資料夾內,新增一個context.xml檔案 內容：設定資料庫相關資訊 name 一定要&amp;quot;jdbc/&amp;quot; 開頭，後面可自訂
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;Context path=&amp;#34;/&amp;#34;&amp;gt; &amp;lt;Resource url=&amp;#34;jdbc:sqlserver://localhost:1433;databaseName=servdb&amp;#34; driverClassName=&amp;#34;com.</description>
+    </item>
+    
+    <item>
       <title>SQL Server IDENTITY RESEED</title>
       <link>https://w32191.github.io/blog/mssql_identity_reseed/</link>
       <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
