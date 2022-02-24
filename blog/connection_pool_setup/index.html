@@ -158,8 +158,11 @@ name 一定要&quot;jdbc/&quot; 開頭，後面可自訂</p>
  <span style="color:#062873;font-weight:bold">&lt;/resource-ref&gt;</span>
 </code></pre></div><p><img src="../../images/imgs/p002.png" alt="image"></p>
 <h4 id="3-java中取得連線池連線">3. java中取得連線池連線</h4>
-<p>紅匡處要與上方res-ref-name相同
-<img src="../../images/imgs/p003.png" alt="image"></p>
+<p>紅匡處要與上方res-ref-name相同</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">      Context context <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> InitialContext<span style="color:#666">();</span>
+      DataSource ds <span style="color:#666">=</span> <span style="color:#666">(</span>DataSource<span style="color:#666">)</span> context<span style="color:#666">.</span><span style="color:#4070a0">lookup</span><span style="color:#666">(</span><span style="color:#4070a0">&#34;java:/comp/env/jdbc/servdb&#34;</span><span style="color:#666">);</span>
+      conn <span style="color:#666">=</span> ds<span style="color:#666">.</span><span style="color:#4070a0">getConnection</span><span style="color:#666">();</span>
+</code></pre></div><p><img src="../../images/imgs/p003.png" alt="image"></p>
 
         </div>
 
