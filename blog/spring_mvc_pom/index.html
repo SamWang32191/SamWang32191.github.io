@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><head>
+  <meta charset="utf-8">
+  <title>柏翔的個人網站</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Spring MVC Maven pom.xml">
+  <meta name="author" content="阿翔">
+  <meta name="generator" content="Hugo 0.88.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://w32191.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://w32191.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://w32191.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://w32191.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://w32191.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://w32191.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://w32191.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-211699850-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://w32191.github.io"><img class="img-fluid"
+          src="https://w32191.github.io/images/logoWang.png" alt="柏翔的個人網站"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/w32191"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://w32191.github.io"><img class="img-fluid"
+            src="https://w32191.github.io/images/logoWang.png" alt="柏翔的個人網站"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://w32191.github.io/about">About Me</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://w32191.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/java"
+          class="text-primary">Java</a>
+        
+        <h2>Spring MVC Maven pom.xml</h2>
+        <div class="mb-3 post-meta">
+          <span>By 阿翔</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2022-03-21</span>
+          
+        </div>
+        
+        <div class="content mb-5">
+          <h3 id="spring-mvc--hikaricp--hibernate-dependency">Spring MVC &amp; HikariCP &amp; Hibernate Dependency</h3>
+<h5 id="pomxml">pom.xml</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#062873;font-weight:bold">&lt;project</span> <span style="color:#4070a0">xmlns=</span><span style="color:#4070a0">&#34;http://maven.apache.org/POM/4.0.0&#34;</span>
+	<span style="color:#4070a0">xmlns:xsi=</span><span style="color:#4070a0">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+	<span style="color:#4070a0">xsi:schemaLocation=</span><span style="color:#4070a0">&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#062873;font-weight:bold">&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;modelVersion&gt;</span>4.0.0<span style="color:#062873;font-weight:bold">&lt;/modelVersion&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>TestProject<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>TestProject<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>0.0.1-SNAPSHOT<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+
+	<span style="color:#062873;font-weight:bold">&lt;properties&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;spring-version&gt;</span>5.3.16<span style="color:#062873;font-weight:bold">&lt;/spring-version&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;/properties&gt;</span>
+
+	<span style="color:#062873;font-weight:bold">&lt;dependencies&gt;</span>
+
+		<span style="color:#60a0b0;font-style:italic">&lt;!-- Spring Core Container --&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-context<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-core<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-beans<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-expression<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#60a0b0;font-style:italic">&lt;!-- Web &amp; Mvc --&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-web<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-webmvc<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#60a0b0;font-style:italic">&lt;!-- Data Access --&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-jdbc<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-orm<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.springframework<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>spring-tx<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>${spring-version}<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#60a0b0;font-style:italic">&lt;!-- Log --&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>commons-logging<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>commons-logging<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>1.2<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#60a0b0;font-style:italic">&lt;!-- Annotation --&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>javax.annotation<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>javax.annotation-api<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>1.3.2<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#60a0b0;font-style:italic">&lt;!-- Servlet &amp; JSP--&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>javax.servlet<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>javax.servlet-api<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>4.0.1<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;scope&gt;</span>provided<span style="color:#062873;font-weight:bold">&lt;/scope&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>javax.servlet.jsp<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>javax.servlet.jsp-api<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>2.3.3<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;scope&gt;</span>provided<span style="color:#062873;font-weight:bold">&lt;/scope&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>jstl<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>jstl<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>1.2<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#60a0b0;font-style:italic">&lt;!-- DataBase --&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>com.microsoft.sqlserver<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>mssql-jdbc<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>9.4.1.jre11<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>com.zaxxer<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>HikariCP<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>5.0.1<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+		<span style="color:#062873;font-weight:bold">&lt;dependency&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#062873;font-weight:bold">&lt;/groupId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>hibernate-core<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>5.6.5.Final<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/dependency&gt;</span>
+
+	<span style="color:#062873;font-weight:bold">&lt;/dependencies&gt;</span>
+
+	<span style="color:#062873;font-weight:bold">&lt;packaging&gt;</span>war<span style="color:#062873;font-weight:bold">&lt;/packaging&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;build&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;plugins&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;plugin&gt;</span>
+				<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>maven-compiler-plugin<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+				<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>3.8.1<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+				<span style="color:#062873;font-weight:bold">&lt;configuration&gt;</span>
+					<span style="color:#062873;font-weight:bold">&lt;release&gt;</span>11<span style="color:#062873;font-weight:bold">&lt;/release&gt;</span>
+				<span style="color:#062873;font-weight:bold">&lt;/configuration&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;/plugin&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;plugin&gt;</span>
+				<span style="color:#062873;font-weight:bold">&lt;artifactId&gt;</span>maven-war-plugin<span style="color:#062873;font-weight:bold">&lt;/artifactId&gt;</span>
+				<span style="color:#062873;font-weight:bold">&lt;version&gt;</span>3.2.3<span style="color:#062873;font-weight:bold">&lt;/version&gt;</span>
+			<span style="color:#062873;font-weight:bold">&lt;/plugin&gt;</span>
+		<span style="color:#062873;font-weight:bold">&lt;/plugins&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;/build&gt;</span>
+<span style="color:#062873;font-weight:bold">&lt;/project&gt;</span>
+</code></pre></div>
+        </div>
+
+        
+        
+        <script src="https://utteranc.es/client.js"
+        repo="w32191/w32191.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="text-capitalize">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Taiwan</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:w32191@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>w32191@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://github.com/w32191">github</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/java">Java</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/sql">SQL</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://w32191.github.io/about">About</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="https://themefisher.com/hugo-themes/">Themefisher</a> All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://w32191.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://w32191.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://w32191.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://w32191.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://w32191.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://w32191.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://w32191.github.io/plugins/search/mark.js"></script>
+
+<script src="https://w32191.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://w32191.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
