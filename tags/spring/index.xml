@@ -6,7 +6,16 @@
     <description>Recent content in Spring on 柏翔的個人網站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://w32191.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://w32191.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>File upload &amp; Show on View</title>
+      <link>https://w32191.github.io/blog/file_upload/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://w32191.github.io/blog/file_upload/</guid>
+      <description>File upload &amp;amp; Show on View Table    Column Name      id int primary key identity   filename VARCHAR(255)   picture VARBINARY(MAX)    1 2 3 4 5  createtablepicture(idintprimarykeyidentitynotnullfilenameVARCHAR(255),pictureVARBINARY(MAX),)  Eitity 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37  package com.</description>
+    </item>
+    
     <item>
       <title>Spring MVC Maven pom.xml</title>
       <link>https://w32191.github.io/blog/spring_mvc_pom/</link>
