@@ -1,0 +1,20 @@
+# .github/workflows/push-trigger.yml
+name: Push Event Workflow
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: arc-runner-set  # 使用您的 ARC 安裝名稱
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Display Event Info
+        run: |
+          echo "🎉 觸發事件: ${{ github.event_name }}"
+          echo "📝 分支: ${{ github.ref }}"
+          echo "👤 執行者: ${{ github.actor }}"
